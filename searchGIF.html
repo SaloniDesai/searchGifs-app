@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-strict-di>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="searchGIF.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<script src="searchGIF.js" type="text/javascript"></script>
+	</head>
+	<body ng-app="searchApp" ng-controller="searchAppController as vm">
+		<div class="container-fluid">
+			<div class="row">
+				<div id="headliner" class="jumbotron text-center">
+			  		<h1>SearchGIFY app</h1>
+			  		<p>search for any GIF you want!</p> 
+				</div>
+			</div>
+			<div class="row">
+				<div id="search">
+					<div class="col-md-12">
+						<form class="form-inline text-center col-md-6 col-md-offset-3">
+							<div class="form-group">
+								<input class="form-control" type="search" ng-model="vm.search.gif" value="" placeholder="type what you're looking for" />
+							</div>
+							<button type="submit" class="btn btn-primary" ng-click="vm.performSearch()">Search</button>
+						</form>
+					</div>
+				</div>          	
+	    	</div>
+		</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<img ng-repeat="g in vm.giphies" ng-src="{{g.images.original.url}}" width="{{g.images.fixed_width.width}}" height="{{g.images.fixed_height.height}}" title="{{g.title}}">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="jumbotron text-center" id="trendingBar">
+						<h3>Trending gifs</h3>
+				    		<img ng-repeat="trending in vm.trendingGifs" ng-src="{{trending.images.original.url}}" width="{{trending.images.fixed_width.width}}" height="{{trending.images.fixed_height.height}}" title="{{trending.title}}">
+					</div>
+				</div>
+			</div>
+	</body>
+	<script>
+	
+	</script>
+</html>

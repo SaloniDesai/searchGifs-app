@@ -1,0 +1,62 @@
+#body {
+	width: 100%;
+}
+
+.container-fluid {
+    background: 
+}
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+#search {
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 10;
+    padding: 50px;
+}
+
+#search input[type="search"] {
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+    font-size: 2.5em;
+    height: 70px;
+    font-weight: 300;
+    text-align: center;
+    border: 0px;
+    margin: 0px auto;
+    outline: none;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+#search .btn {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-top: 40px;
+    margin-left: -45px;
+}
+
+.form-group {
+    width: 80%;
+}
+
+.card {
+    background-color: orange;
+}
+
+.card img {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.thumbnail img{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#trendingBar {
+    background-color: #FF5733;
+}
+
